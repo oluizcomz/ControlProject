@@ -40,7 +40,7 @@ void loop()
   time_s = ((millis()/1000.0));
   temp = dht.readTemperature();
   if(digitalRead(BOTTON)){
-    ref = temp_init - 5.0;
+    ref = temp_init - 10.0;
     
     erro = temp - ref;
     PWM_calc = (ka*erro) - (kb*erro_before) + PWM ;
